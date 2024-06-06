@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,34 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('/forms', function() {
+    return view('forms');
+})->name('forms');
+
+Route::get('/tables', function() {
+    return view('tables');
+})->name('tables');
+
+Route::get('/livewire', function() {
+    return view('livewire');
+})->name('livewire');
+
+Route::get('/actions', function() {
+    return view('actions');
+})->name('actions');
+
+Route::get('/ui', function() {
+    return view('ui');
+})->name('ui');
+
+Route::post('/forms', function(Request $request) {
+
+    $request->validate([
+        'name' => 'required',
+        'website' => 'required'
+    ]);
+
+    return $request->all();
+})->name('forms.store');

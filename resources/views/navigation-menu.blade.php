@@ -15,6 +15,21 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('forms') }}" :active="request()->routeIs('forms')">
+                        Formularios
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('tables') }}" :active="request()->routeIs('tables')">
+                        Tablas
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('livewire') }}" :active="request()->routeIs('livewire')">
+                        Livewire
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('actions') }}" :active="request()->routeIs('actions')">
+                        Actiones
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('ui') }}" :active="request()->routeIs('ui')">
+                        UI
+                    </x-nav-link>
                 </div>
             </div>
 

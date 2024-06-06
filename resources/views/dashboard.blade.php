@@ -5,11 +5,18 @@
         </h2>
     </x-slot>
 
+    @php
+        $type = 'success';
+    @endphp
+
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
-        </div>
+        <x-container>
+            <x-alert :type="$type">
+                <x-slot name="title">
+                    Title
+                </x-slot>
+                Alert Message
+            </x-alert>
+        </x-container>
     </div>
 </x-app-layout>
